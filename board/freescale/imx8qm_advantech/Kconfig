@@ -1,0 +1,12 @@
+if TARGET_IMX8QMROM7720A1_6G
+
+config SYS_BOARD
+	default "imx8qm_advantech"
+
+config SYS_VENDOR
+	default "freescale"
+
+config SYS_CONFIG_NAME
+	default "imx8qm_rom7720a1"
+	
+endif

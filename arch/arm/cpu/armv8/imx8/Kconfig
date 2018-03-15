@@ -18,6 +18,11 @@ config IMX8QM
 	bool
 	select HAVE_SC_FIRMWARE
 
+config ADVANTECH
+	bool
+	select IMX8QM
+	default y
+
 config IMX8QXP
 	bool
 	select HAVE_SC_FIRMWARE
@@ -33,6 +38,11 @@ config TARGET_IMX8QM_LPDDR4_ARM2
 	bool "Support i.MX8QM lpddr4 validation board"
 	select BOARD_LATE_INIT
 	select IMX8QM
+
+config TARGET_IMX8QMROM7720A1_6G
+	bool "Support i.MX8QM rom7720a1 6G"
+	select BOARD_LATE_INIT
+	select ADVANTECH
 
 config TARGET_IMX8QM_DDR4_ARM2
 	bool "Support i.MX8QM ddr4 validation board"
@@ -62,6 +72,7 @@ config TARGET_IMX8QXP_MEK
 endchoice
 
 source "board/freescale/imx8qm_arm2/Kconfig"
+source "board/freescale/imx8qm_advantech/Kconfig"
 source "board/freescale/imx8qm_mek/Kconfig"
 source "board/freescale/imx8qxp_arm2/Kconfig"
 source "board/freescale/imx8qxp_mek/Kconfig"
