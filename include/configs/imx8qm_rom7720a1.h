@@ -151,7 +151,7 @@
 	"loadimage=fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${image}\0" \
 	"loadfdt=fatload mmc ${mmcdev}:${mmcpart} ${fdt_addr} ${fdt_file}\0" \
 	"hdp_addr=0x84000000\0" \
-	"hdp_file=hdmifw.bin\0" \
+	"hdp_file=hdmitxfw.bin\0" \
 	"loadhdp=fatload mmc ${mmcdev}:${mmcpart} ${hdp_addr} ${hdp_file}\0" \
 	"mmcboot=echo Booting from mmc ...; " \
 		"run loadhdp; hdp load ${hdp_addr}; " \
